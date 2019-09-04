@@ -1,0 +1,13 @@
+{
+  "name": "node",
+  "private": true,
+  "scripts": {
+    "start": "node -r dotenv/config .",
+    "start:dev": "yarn start"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "carlo": "^0.9.46",
+    "dotenv": "^8.1.0"
+  }
+}
