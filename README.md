@@ -1,4 +1,6 @@
-# `node`
+# `epic-metal`
+
+Minimalist Jira UI, built with [`carlo`](https://github.com/GoogleChromeLabs/carlo)
 
 ## Install
 
@@ -11,5 +13,6 @@ $ cp .env.example .env
 ## Usage
 
 ```sh
-$ yarn start:dev
+$ yarn start:dev:frontend &
+$ yarn start:dev:app
 ```

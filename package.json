@@ -2,12 +2,16 @@
   "name": "node",
   "private": true,
   "scripts": {
-    "start": "node -r dotenv/config .",
-    "start:dev": "yarn start"
+    "start": "NODE_ENV=production yarn start:dev:app",
+    "start:dev": "yarn start",
+    "start:dev:app": "node -r dotenv/config packages/app/src",
+    "start:dev:cli": "node -r dotenv/config packages/app/src/cli",
+    "start:dev:frontend": "cd packages/frontend && yarn start"
   },
-  "dependencies": {
-    "axios": "^0.19.0",
-    "carlo": "^0.9.46",
-    "dotenv": "^8.1.0"
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "3.6.2"
   }
 }

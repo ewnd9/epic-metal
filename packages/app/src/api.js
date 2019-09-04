@@ -1,7 +1,7 @@
 'use strict';
 
 const axios = require('axios');
-const config = require('./config.json');
+const config = require('../../../config.json');
 const client = axios.create({
   auth: {
     username: process.env.APP_USERNAME,

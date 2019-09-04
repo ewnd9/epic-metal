@@ -12,5 +12,5 @@ const {getJira} = require('./api');
     return getJira();
   });
 
-  await app.load('index.html');
+  await app.load('http://localhost:3000');
 })();
