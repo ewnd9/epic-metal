@@ -3,4 +3,5 @@
 interface Window {
   env: any;
   openInSystemBrowser: any;
+  __setValueFromBackend: any;
 }

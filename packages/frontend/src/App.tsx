@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
+window.__setValueFromBackend = () => {
+  console.log('nothing');
+};
+
 export const App: React.FC = () => {
   const [data, setData] = useState({ result: [], config: null });
   useEffect(() => {
@@ -8,6 +12,16 @@ export const App: React.FC = () => {
       setData({config, result});
     })();
   }, []);
+
+  useEffect(() => {
+    window.__setValueFromBackend = (result: any) => {
+      setData({...data, result});
+    };
+  }, [data]);
+
+  if (data.result.length === undefined) {
+    return <div>Loading</div>;
+  }
 
   return (
     <div className="App">
