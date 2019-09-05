@@ -2,4 +2,5 @@
 
 interface Window {
   env: any;
+  openInSystemBrowser: any;
 }
