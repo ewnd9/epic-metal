@@ -16,3 +16,9 @@ $ cp .env.example .env
 $ yarn start:dev:frontend &
 $ yarn start:dev:app
 ```
+
+### Storybook
+
+```sh
+$ yarn storybook
+```
