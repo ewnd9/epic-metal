@@ -7,6 +7,7 @@
     "start:dev:app": "node -r dotenv/config packages/app/src",
     "start:dev:cli": "node -r dotenv/config packages/app/src/cli",
     "start:dev:frontend": "cd packages/frontend && yarn start",
+    "build:frontend": "cd packages/frontend && yarn build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

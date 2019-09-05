@@ -2,8 +2,11 @@
 
 const carlo = require('carlo');
 const execa = require('execa');
+const path = require('path');
 const config = require('../../../config.json');
 const {getJira} = require('./api');
+const isProd = process.env.NODE_ENV === 'production';
+const frontendBuildFolder = path.resolve(`${__dirname}/../../frontend/build`);
 
 (async () => {
   const app = await carlo.launch();
@@ -20,9 +23,13 @@ const {getJira} = require('./api');
   });
 
   await app.exposeFunction('openInSystemBrowser', async url => {
-    console.log(url);
     execa('xdg-open', [url]);
   });
 
-  await app.load('http://localhost:3000');
+  if (isProd) {
+    app.serveFolder(frontendBuildFolder);
+    await app.load('index.html');
+  } else {
+    await app.load('http://localhost:3000');
+  }
 })();
