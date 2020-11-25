@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "sourceMap": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "outDir": "dist/main"
+  },
+  "include": ["src", "webpack.config.ts"],
+  "exclude": ["node_modules"]
+}

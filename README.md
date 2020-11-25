@@ -1,27 +1,12 @@
 # `epic-metal`
 
-Minimalist Jira UI, built with [`carlo`](https://github.com/GoogleChromeLabs/carlo)
+Minimalist Jira UI, built with `electron`
 
-## Install
-
-```sh
-$ yarn install
-$ cp config.json.example config.json
-$ cp .env.example .env
-$ yarn build:frontend
-```
-
-## Usage
+## Developing
 
 ```sh
+$ yarn build:watch &
 $ yarn start
-```
-
-## Development
-
-```sh
-$ yarn start:dev:frontend &
-$ yarn start:dev:app
 ```
 
 ### Storybook
